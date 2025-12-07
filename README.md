@@ -14,7 +14,7 @@ New features, improvements, and fixes are being added regularly.
 - **Tailwind CSS**
 - **Prisma ORM**
 - **NextAuth (Google + Credentials)**
-- **Supabase (for database & storage)**
+- **Neon (for database & storage)**
 - **React Hook Form + Zod (for validations)**
 - **Vercel (deployment later)**
 
