@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Decent E-Commerce 🛒  
+A modern e-commerce web application built with **Next.js 14**, **Tailwind CSS**, and **Prisma**.
 
-## Getting Started
+## 🚧 Project Status  
+**This project is currently under active development (WIP).**  
+New features, improvements, and fixes are being added regularly.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ⚡ Tech Stack
+
+- **Next.js 14 (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Prisma ORM**
+- **NextAuth (Google + Credentials)**
+- **Supabase (for database & storage)**
+- **React Hook Form + Zod (for validations)**
+- **Vercel (deployment later)**
+
+---
+
+## ✨ Features (Implemented / In Progress)
+
+### ✅ Implemented
+- Google Authentication (NextAuth)
+- Credentials Authentication (Email + Password)
+- Prisma database schema
+- User cart creation per user
+- Add to cart / update quantity
+- Responsive product cards
+- Basic product listing UI
+
+### 🔄 In Progress
+- Cart page UI polishing
+- Remove item from cart
+- Product details page
+- Admin/Vendor dashboard
+- Product management (add/edit/delete)
+- Full checkout flow
+- Order system
+
+### 📝 Planned
+- Wishlist system  
+- Search & filtering  
+- Material UI redesign  
+- Full responsive overhaul  
+
+---
+
+## 📂 Project Structure (simplified)
+
+```
+app/
+ ├─ (features)/
+ │   ├─ auth/
+ │   ├─ cart/
+ │   ├─ products/
+ │   └─ _actions/
+ ├─ api/
+ └─ layout.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone https://github.com/USERNAME/Decent-ecommerce
+cd Decent-ecommerce
+npm install
+npm run dev
+```
 
-## Learn More
+Make sure you configure your `.env` file:
 
-To learn more about Next.js, take a look at the following resources:
+```
+DATABASE_URL=
+NEXTAUTH_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧑‍💻 Author
+**Hussain Abdelkawy**
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📌 Notes  
+This repository contains work-in-progress code.  
+Features may change, break, or be refactored as the project evolves.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
