@@ -1,26 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jersey+10&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Jersey+10&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #35afa0;
+  --color-secondary: #3e445a;
+  --color-buttonBackground: #233a95;
+  --color-red: #d51243;
+  --color-star: #ffcd00;
+  --color-heading: #202435;
+  --color-subHeading: #9b9bb4;
+  --color-brandDark: #1a1a1a;
+  --color-brandGold: #c5a065;
+  --color-brandGoldHover: #b08d55;
+  --color-brandLight: #f9f9f9;
+  --color-brandBorder: #e5e5e5;
+
+  --font-body: "Dosis", sans-serif;
+  --font-logo: "Jersey 10", sans-serif;
+  --font-subHeading: "Inter", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+
+  --text-standard: 14px;
+  --section-margin: 30px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@utility section-container {
+  @apply container mx-auto px-[15px];
+}
+@utility nav-button {
+  @apply bg-indigo-600 text-white rounded-[22px] px-6 py-2 font-semibold text-sm 
+         cursor-pointer transition-all duration-200 ml-[18px]
+         shadow-[0_2px_8px_rgba(30,136,229,0.08)] hover:bg-indigo-700;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility social-media {
+  @apply text-white flex items-center gap-6 py-2 px-4 rounded-sm sm:w-[270px] h-[42px];
+}
+
+/* Auth form utilities */
+@utility auth-page {
+  @apply flex items-center grow justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50;
+}
+
+@utility auth-card {
+  @apply max-w-md w-full bg-white shadow-md rounded-lg p-8;
+}
+
+@utility auth-heading {
+  @apply text-2xl font-semibold text-gray-800 text-center mb-6;
+}
+
+@utility form-input {
+  @apply appearance-none rounded-md block w-full px-3 py-2 border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+@utility form-button {
+  @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
+
+@utility form-error {
+  @apply mt-1 text-sm text-red-600;
+}
+
+@utility radio-input {
+  @apply h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500;
+}
+
+@utility form-legend {
+  @apply text-sm font-medium text-gray-700 mb-2;
+}
+
+/* Google button */
+@utility google-button {
+  @apply w-full inline-flex items-center justify-center gap-3 py-2 px-4 border rounded-md shadow-sm bg-white text-gray-700 hover:bg-gray-50 border-gray-200 transition-colors duration-150;
+}
+
+@utility google-button-disabled {
+  @apply opacity-60 cursor-not-allowed;
+}
+
+@utility google-icon {
+  @apply h-5 w-5;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
 }
