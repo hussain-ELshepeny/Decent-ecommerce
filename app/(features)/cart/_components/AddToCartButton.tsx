@@ -4,6 +4,7 @@ import { CartItem } from "../_types/cart-types"
 import { addToCart } from "../_actions/cart-actions"
 import { useSession } from "next-auth/react"
 import { Product } from "@/app/generated/prisma"
+// import type { Product } from "@prisma/client"
 interface AddToCartButtonProps {
   product: Product
   inStock: boolean

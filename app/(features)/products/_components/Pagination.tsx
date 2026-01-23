@@ -13,15 +13,21 @@ export default function Pagination({
 
   return (
     <div className="flex items-center justify-center gap-3 mt-6">
-      <Link href={`?page=${prev}`} className="px-4 py-2 bg-gray-200 rounded">
+      <Link
+        href={`?page=${prev}`}
+        className="inline-flex items-center px-3 py-1.5 border border-[#EDEEF5] bg-white text-sm font-medium text-gray-800  shadow-sm hover:bg-gray-50 transition"
+      >
         Prev
       </Link>
 
-      <span className="px-4 py-2 bg-gray-100 rounded">
+      <span className="inline-flex items-center px-3 py-1.5 border border-[#EDEEF5] bg-white text-sm font-medium text-gray-700  shadow-sm">
         {page} / {totalPages}
       </span>
 
-      <Link href={`?page=${next}`} className="px-4 py-2 bg-gray-200 rounded">
+      <Link
+        href={`?page=${next}`}
+        className="inline-flex items-center px-3 py-1.5 border border-[#EDEEF5] bg-white text-sm font-medium text-gray-800  shadow-sm hover:bg-gray-50 transition"
+      >
         Next
       </Link>
     </div>

@@ -7,13 +7,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href={"/"} className="flex-shrink-0 flex items-center">
+          <Link href={"/"} className="shrink-0 flex items-center">
             <div className="text-center">
               <h1 className="text-2xl font-serif font-bold tracking-wider text-brandGold">
                 DECENT
               </h1>
-              <span className="block text-[10px] tracking-[0.2em] text-gray-300 uppercase mt-[-4px]">
-                Men's Wear
+              <span className="block text-[10px] tracking-[0.2em] text-gray-300 uppercase -mt-1]">
+                Mens Wear
               </span>
             </div>
           </Link>

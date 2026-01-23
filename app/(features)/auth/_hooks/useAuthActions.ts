@@ -1,7 +1,9 @@
 import { signIn, signOut } from "next-auth/react"
 import { LoginFormType } from "@/app/(features)/auth/_validation/authSchemas"
-import { redirect } from "next/navigation"
+import { useRouter } from "next/navigation"
+
 export function useAuthActions() {
+  const router = useRouter()
   async function credentialsLogin(formData: LoginFormType) {
     const result = await signIn("credentials", {
       email: formData.email,
@@ -13,9 +15,9 @@ export function useAuthActions() {
       console.log(result?.error)
       return { error: result.error }
     }
-
-    // return { success: true }
-    return redirect("/")
+    router.push("/")
+    router.refresh()
+    return { success: true }
   }
 
   async function logout() {
@@ -23,8 +25,7 @@ export function useAuthActions() {
   }
 
   async function googleSignIn() {
-    await signIn("google")
-    redirect("/")
+    await signIn("google", { callbackUrl: "/" })
   }
 
   return { logout, googleSignIn, credentialsLogin }

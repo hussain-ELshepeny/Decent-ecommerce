@@ -1,10 +1,6 @@
 "use server"
-import {
-  registerSchema,
-  RegisterFormType,
-} from "@/app/(features)/auth/_validation/authSchemas"
-import { signIn, signOut } from "next-auth/react"
-import { LoginFormType } from "@/app/(features)/auth/_validation/authSchemas"
+import { registerSchema } from "@/app/(features)/auth/_validation/authSchemas"
+
 import prisma from "@/lib/prisma"
 import * as bcrypt from "bcryptjs"
 import { redirect } from "next/navigation"
@@ -33,14 +29,13 @@ export async function credentialsRegister(prevState: any, formData: FormData) {
     }
   }
 
-  // const { name, email, password, accountType } = validatedFields.data
   const {
     name: validatedName,
     email: validatedEmail,
     password: validatedPassword,
     accountType: validatedAccountType,
   } = validatedFields.data
-
+  // know we will continue based on that they are compatible with the schema
   try {
     // check if the user is already exists
     const existingUser = await prisma.user.findUnique({
@@ -48,10 +43,8 @@ export async function credentialsRegister(prevState: any, formData: FormData) {
     })
 
     if (existingUser) {
-      //return an error if it exists
-
       return {
-        message: "هذا البريد الإلكتروني مسجل بالفعل. يرجى تسجيل الدخول.",
+        message: "The Email is already used before .",
       }
     }
 
@@ -71,7 +64,7 @@ export async function credentialsRegister(prevState: any, formData: FormData) {
   } catch (error) {
     // handle any error
     console.error("REGISTER_ACTION_ERROR:", error)
-    return { message: "حدث خطأ أثناء إنشاء الحساب. يرجى المحاولة لاحقاً." }
+    return { message: "Failed to create an account, Please try again ." }
   }
 
   // redirect

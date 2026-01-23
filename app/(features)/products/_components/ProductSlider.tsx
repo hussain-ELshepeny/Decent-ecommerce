@@ -17,7 +17,7 @@ export default function ProductsSlider({ products }: { products: Product[] }) {
         modules={[Navigation]}
         spaceBetween={0}
         // slidesPerView={5}
-        loop={true}
+        loop={false}
         navigation={{
           nextEl: ".products-next",
           prevEl: ".products-prev",
