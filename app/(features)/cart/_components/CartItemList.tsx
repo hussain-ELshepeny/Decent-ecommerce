@@ -3,7 +3,7 @@ import { getCart } from "../_actions/cart-actions"
 import Link from "next/link"
 export default async function CartItemList() {
   const items = await getCart()
-
+  console.log(items)
   if (items.length > 0)
     return (
       <div className="bg-transparent space-y-4">

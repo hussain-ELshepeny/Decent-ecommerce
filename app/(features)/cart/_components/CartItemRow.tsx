@@ -5,9 +5,8 @@ import {
   increaseItem,
   removeItem,
 } from "../_actions/cart-actions"
-import { CartItem } from "@/app/generated/prisma"
-
-export default function CartItemRow({ item }: { item: CartItem }) {
+import { CartItemWithProduct } from "../_types/cart-types"
+export default function CartItemRow({ item }: { item: CartItemWithProduct }) {
   async function handleIncrease(id: string) {
     await increaseItem(id)
   }
@@ -20,9 +19,9 @@ export default function CartItemRow({ item }: { item: CartItem }) {
   return (
     <div className="flex flex-col sm:flex-row items-center bg-white p-4 rounded-lg shadow-sm mb-4 border border-gray-100">
       {/* Product Image */}
-      <div className="flex-shrink-0 w-full sm:w-24 h-32 bg-gray-100 rounded-md overflow-hidden mb-4 sm:mb-0">
+      <div className="shrink-0 w-full sm:w-24 h-32 bg-gray-100 rounded-md overflow-hidden mb-4 sm:mb-0">
         <img
-          src={item?.product?.image}
+          src={item?.product?.image || ""}
           alt={item?.product?.name}
           className="w-full h-full object-cover object-center mix-blend-multiply"
         />
