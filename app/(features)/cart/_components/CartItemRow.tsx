@@ -36,24 +36,6 @@ export default function CartItemRow({ item }: { item: CartItemWithProduct }) {
             </h3>
             {/* Mobile trash icon could go here, but design has it right aligned in row */}
           </div>
-          {/* <p className="text-sm text-gray-500 mt-1">{item.description}</p> */}
-          {/* <div className="text-xs text-gray-500 mt-2 space-y-1">
-            {item.category && (
-              <p>
-                Category: <span className="text-gray-700">{item.category}</span>
-              </p>
-            )}
-            {item.color && (
-              <p>
-                Color: <span className="text-gray-700">{item.color}</span>
-              </p>
-            )}
-            {item.size && (
-              <p>
-                Size: <span className="text-gray-700">{item.size}</span>
-              </p>
-            )}
-          </div> */}
         </div>
       </div>
 
