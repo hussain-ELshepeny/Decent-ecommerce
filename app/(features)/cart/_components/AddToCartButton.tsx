@@ -3,7 +3,7 @@ import { useCart } from "../_hooks/useCart"
 import { CartItem } from "../_types/cart-types"
 import { addToCart } from "../_actions/cart-actions"
 import { useSession } from "next-auth/react"
-import { Product } from "@prisma/client" // import type { Product } from "@prisma/client"
+import { Product } from "@prisma/client"
 interface AddToCartButtonProps {
   product: Product
   inStock: boolean
