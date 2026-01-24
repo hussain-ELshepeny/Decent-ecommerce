@@ -8,42 +8,35 @@ import SearchButton from "../shared/SearchButton"
 export default async function NavButtons() {
   const session = await getServerSession(authOptions)
 
-  const ICON_STYLE =
-    "hover:text-brandGold hover:cursor-pointer transition-colors text-[18px] md:text-[19px] hover:cursor-pointer"
-  const DESKTOP_ONLY = "hidden md:block"
-
   return (
     <div
-      className={`hidden md:flex items-center space-x-3 md:space-x-6 text-gray-300 `}
+      className={`hidden md:flex items-center space-x-3 md:space-x-6 text-gray-300`}
     >
       {/* search button */}
-      <div className={`hidden md:flex ${ICON_STYLE}  items-center`}>
+      <div className={`hidden md:flex nav-icon  items-center`}>
         <SearchButton />
       </div>
 
       {session?.user ? (
         <>
-          <Link href="/profile" className={`${ICON_STYLE} ${DESKTOP_ONLY}`}>
+          <Link href="/profile" className={`nav-icon desktop-only`}>
             <FiUser />
           </Link>
 
-          <Link href="/wishlist" className={`${ICON_STYLE} ${DESKTOP_ONLY}`}>
+          <Link href="/wishlist" className={`nav-icon desktop-only`}>
             <FiHeart />
           </Link>
 
-          <Link
-            href="/cart"
-            className={`${ICON_STYLE} ${DESKTOP_ONLY} relative`}
-          >
+          <Link href="/cart" className={`nav-icon desktop-only relative`}>
             <FiShoppingCart />
           </Link>
 
-          <div className={DESKTOP_ONLY}>
-            <LogoutButton className={`${ICON_STYLE}`} />
+          <div className="desktop-only">
+            <LogoutButton className={`nav-icon`} />
           </div>
         </>
       ) : (
-        <Link href="/auth/login" className={`text-sm ${ICON_STYLE}`}>
+        <Link href="/auth/login" className={`text-sm nav-icon`}>
           Login
         </Link>
       )}

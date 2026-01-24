@@ -8,6 +8,7 @@ import { extractRouterConfig } from "uploadthing/server"
 import { ourFileRouter } from "@/app/api/uploadthing/core"
 import { CartProvider } from "./(features)/cart/_context/CartProvider"
 import Footer from "@/components/layout/Footer"
+import { NuqsAdapter } from "nuqs/adapters/next/app"
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -31,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
+      <body>
         <SessionProvider>
           <Header />
           <main className="min-h-screen flex flex-col">
@@ -44,7 +45,9 @@ export default function RootLayout({
                */
               routerConfig={extractRouterConfig(ourFileRouter)}
             />
-            <CartProvider>{children}</CartProvider>
+            <NuqsAdapter>
+              <CartProvider>{children}</CartProvider>
+            </NuqsAdapter>
           </main>
           <Footer />
         </SessionProvider>

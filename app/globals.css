@@ -86,6 +86,15 @@
   @apply h-5 w-5;
 }
 
+/* nav icons */
+@utility nav-icon {
+  @apply hover:text-brandGold transition-colors text-[18px] md:text-[21px] hover:cursor-pointer;
+}
+
+@utility desktop-only {
+  @apply hidden md:block;
+}
+
 body {
   background-color: #f8f8f8;
 }
