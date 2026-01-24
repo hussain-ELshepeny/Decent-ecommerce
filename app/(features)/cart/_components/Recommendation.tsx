@@ -1,4 +1,4 @@
-import ProductCard from "../../_products/_components/ProductCard"
+// import ProductCard from "../../products/_components/ProductCard"
 
 export default function Recommendation() {
   const RECOMMENDATIONS = [{ id: 1, name: "hussain" }]
