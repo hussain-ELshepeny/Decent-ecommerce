@@ -1,5 +1,5 @@
 import { CiHeart } from "react-icons/ci"
-import { Product } from "@/app/generated/prisma"
+import { Product } from "@prisma/client"
 export default function NewArrivalProduct({ product }: Product) {
   return (
     <div className="group relative flex flex-col">

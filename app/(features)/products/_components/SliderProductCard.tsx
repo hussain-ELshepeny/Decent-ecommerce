@@ -1,7 +1,7 @@
 import { useState } from "react"
 // import ProductDialog from "../shared/ProductDialog"
 import { AddToCartButton } from "../../cart/_components/AddToCartButton"
-import { Product } from "@/app/generated/prisma"
+import { Product } from "@prisma/client"
 export default function SliderProductCard({ product }: { product: Product }) {
   // const [open, setOpen] = useState(false)
   return (

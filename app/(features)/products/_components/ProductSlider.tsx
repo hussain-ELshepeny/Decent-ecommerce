@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/navigation"
 import ProductCard from "./ProductCard"
-import { Product } from "@/app/generated/prisma"
+import { Product } from "@prisma/client"
 import SliderProductCard from "./SliderProductCard"
 
 export default function ProductsSlider({ products }: { products: Product[] }) {

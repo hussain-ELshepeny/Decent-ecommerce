@@ -1,4 +1,4 @@
-import { Product } from "@/app/generated/prisma"
+import { Product } from "@prisma/client"
 import ProductCard from "./ProductCard"
 export default function ProductsList({ products }: { products: Product[] }) {
   return (

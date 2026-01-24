@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { Product } from "@/app/generated/prisma"
+import { Product } from "@prisma/client"
 import { AddToCartButton } from "../../cart/_components/AddToCartButton"
 
 export default function ProductCard({ product }: { product: Product }) {
