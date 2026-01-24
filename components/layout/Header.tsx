@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Nav from "./Nav"
+import DeskTopNav from "./DeskTopNav"
 
 export default function Header() {
   return (
@@ -18,25 +19,7 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
-            <Link
-              href="/"
-              className="hover:text-brandGold transition-colors border-b-2 border-brandGold pb-1"
-            >
-              Home
-            </Link>
-            <Link
-              href="/products"
-              className="hover:text-brandGold transition-colors border-b-2 border-brandGold pb-1"
-            >
-              Products
-            </Link>
-            {/* <button className="text-white">Categories</button> */}
-            <button className=" text-white hover:text-brandGold transition-colors">
-              About
-            </button>
-          </nav>
+          <DeskTopNav />
 
           <Nav />
         </div>
