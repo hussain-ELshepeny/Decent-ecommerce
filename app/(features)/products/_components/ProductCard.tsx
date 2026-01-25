@@ -11,7 +11,7 @@ export default function ProductCard({ product }: { product: Product }) {
       {/* image */}
       <div className="flex items-center justify-center w-full h-48   bg-white overflow-hidden group">
         <img
-          src={product?.image}
+          src={product?.image || ""}
           alt={product?.name}
           // width={400}
           // height={400}

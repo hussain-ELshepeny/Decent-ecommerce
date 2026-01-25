@@ -1,11 +1,12 @@
 import { CiHeart } from "react-icons/ci"
 import { Product } from "@prisma/client"
-export default function NewArrivalProduct({ product }: Product) {
+export default function NewArrivalProduct({ product }: { product: Product }) {
+  console.log(product)
   return (
     <div className="group relative flex flex-col">
       <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden rounded-sm">
         <img
-          src={product.image}
+          src={product.image || ""}
           alt={product.name}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
         />

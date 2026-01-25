@@ -12,7 +12,7 @@ export default function SliderProductCard({ product }: { product: Product }) {
       <div className="flex flex-col gap-2 justify-between h-full">
         {/* why lazy */}
         <img
-          src={product?.image}
+          src={product?.image || ""}
           alt="product"
           loading="lazy"
           // className="flex-1"
