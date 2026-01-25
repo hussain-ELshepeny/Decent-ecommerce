@@ -1,4 +1,3 @@
-import Products from "./(features)/products/_components/Products"
 import Landing from "@/components/Landing"
 import NewArrivals from "./(features)/products/_components/NewArrivals"
 import BestSellers from "./(features)/products/_components/BestSellers"
