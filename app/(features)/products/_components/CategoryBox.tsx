@@ -10,7 +10,7 @@ export default function CategoryBox({
   return (
     <div className="relative h-[400px] bg-gray-200 group overflow-hidden cursor-pointer">
       {/* maybe i will use search params to send the user to all products page and filter automatically */}
-      <Link href={"/"}>
+      <Link href={"/products"}>
         <img
           src={imageSrc}
           alt="Formal"
