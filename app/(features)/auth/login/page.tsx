@@ -7,6 +7,15 @@ export default function page() {
       <div className="auth-card">
         <h2 className="auth-heading">Login</h2>
         <LoginForm />
+        <p className="mt-4 text-sm text-gray-600 text-center">
+          Do not have an account?{" "}
+          <Link
+            href={"/auth/register"}
+            className="text-brandDark hover:text-brandGold font-medium"
+          >
+            Sign up
+          </Link>
+        </p>
         <p className="mt-1 text-sm text-gray-600 text-center">
           Continue as a{" "}
           <Link
