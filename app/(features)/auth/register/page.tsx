@@ -16,6 +16,15 @@ export default function RegisterPage() {
             Login
           </Link>
         </p>
+        <p className="mt-1 text-sm text-gray-600 text-center">
+          Continue as a{" "}
+          <Link
+            href={"/"}
+            className="text-brandDark hover:text-brandGold font-medium"
+          >
+            Guest
+          </Link>
+        </p>
       </div>
     </div>
   )
