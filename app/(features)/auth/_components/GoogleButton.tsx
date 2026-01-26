@@ -13,7 +13,7 @@ export default function GoogleButton() {
       type="button"
       // disabled={isPending}
       // className={`google-button ${isPending ? "google-button-disabled" : ""}`}
-      className={`google-button `}
+      className={`google-button`}
     >
       <svg
         stroke="currentColor"

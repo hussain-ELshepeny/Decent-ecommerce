@@ -58,7 +58,7 @@
 }
 
 @utility form-button {
-  @apply w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+  @apply w-full hover:cursor-pointer flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-[#1a1a1a] hover:text-[#c5a065] focus:outline-none focus:ring-2;
 }
 
 @utility form-error {
@@ -75,7 +75,7 @@
 
 /* Google button */
 @utility google-button {
-  @apply w-full inline-flex items-center justify-center gap-3 py-2 px-4 border rounded-md shadow-sm bg-white text-gray-700 hover:bg-gray-50 border-gray-200 transition-colors duration-150;
+  @apply w-full hover:cursor-pointer inline-flex items-center justify-center gap-3 py-2 px-4 border rounded-md shadow-sm bg-white text-gray-700 hover:bg-gray-50 border-gray-200 transition-colors duration-150;
 }
 
 @utility google-button-disabled {

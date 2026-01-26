@@ -21,7 +21,7 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* content */}
-      <div className="px-4 py-3 flex flex-col flex-grow">
+      <div className="px-4 py-3 flex flex-col grow">
         <h3 className="text-xs uppercase font-semibold text-gray-800 mb-2 line-clamp-2">
           {product?.name}
         </h3>

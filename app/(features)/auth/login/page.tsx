@@ -11,7 +11,7 @@ export default function page() {
           Do not have an account?{" "}
           <Link
             href={"/auth/register"}
-            className="text-indigo-600 hover:text-indigo-700"
+            className="text-brandDark hover:text-brandGold font-medium"
           >
             Sign up
           </Link>
