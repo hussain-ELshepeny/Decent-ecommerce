@@ -1,13 +1,16 @@
 "use client"
 import { usePathname } from "next/navigation"
-import Header from "./Header"
-import Footer from "./Footer"
 
+interface ConditionalLayoutProps {
+  children: React.ReactNode
+  header: React.ReactNode
+  footer: React.ReactNode
+}
 export default function ConditionalLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+  header,
+  footer,
+}: ConditionalLayoutProps) {
   const pathname = usePathname()
 
   const authPaths = ["/auth/login", "/auth/register"]
@@ -15,9 +18,9 @@ export default function ConditionalLayout({
 
   return (
     <>
-      {!isAuthPage && <Header />}
+      {!isAuthPage && header}
       <main className="min-h-screen flex flex-col">{children}</main>
-      {!isAuthPage && <Footer />}
+      {!isAuthPage && footer}
     </>
   )
 }
