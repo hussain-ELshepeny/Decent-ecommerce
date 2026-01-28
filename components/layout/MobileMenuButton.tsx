@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import { FiMenu } from "react-icons/fi"
-import Sidebar from "./SideBar"
+import Sidebar from "./sidebar/SideBar"
 
 export default function MobileMenuBtn() {
   const [isOpen, setIsOpen] = useState(false)
