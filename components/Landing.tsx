@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 import { TiArrowLeft, TiArrowRight } from "react-icons/ti"
 
@@ -18,9 +19,12 @@ const Hero: React.FC = () => {
               sustainable materials, and a fit that speaks for itself.
             </p>
             <div className="flex space-x-4 justify-center lg:justify-start">
-              <button className="bg-white text-slate-900 px-8 py-3 font-semibold hover:bg-gray-100 transition-colors">
+              <Link
+                href={"/products"}
+                className="bg-white text-slate-900 px-8 py-3 font-semibold hover:bg-gray-100 transition-colors"
+              >
                 SHOP NOW
-              </button>
+              </Link>
               <button className="border border-gray-600 px-8 py-3 font-semibold hover:border-brandGoldHover transition-colors">
                 EXPLORE
               </button>

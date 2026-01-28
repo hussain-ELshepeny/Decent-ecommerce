@@ -1,16 +1,21 @@
-// components/layout/MobileMenuBtn.tsx
 "use client"
+import { useState } from "react"
 import { FiMenu } from "react-icons/fi"
+import Sidebar from "./SideBar"
 
 export default function MobileMenuBtn() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const toggleMenu = () => setIsOpen(!isOpen)
   return (
-    <button
-      onClick={() => {
-        console.log("Open Sidebar")
-      }}
-      className="text-gray-300 hover:text-brandGold"
-    >
-      <FiMenu />
-    </button>
+    <>
+      <button
+        onClick={toggleMenu}
+        className="text-gray-300 hover:text-brandGold hover:cursor-pointer"
+      >
+        <FiMenu />
+      </button>
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+    </>
   )
 }
