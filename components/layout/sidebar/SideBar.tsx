@@ -1,6 +1,5 @@
 "use client"
 import { useEffect } from "react"
-import { IoMdClose } from "react-icons/io"
 import SidebarFooter from "./SidebarFooter"
 import SidebarLinks from "./SidebarLinks"
 import SidebarHeader from "./SidebarHeader"

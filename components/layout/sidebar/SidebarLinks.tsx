@@ -9,7 +9,7 @@ export default function SidebarLinks({ setIsOpen }: SidebarLinksProps) {
     { id: 2, label: "Products", href: "/products" },
     { id: 3, label: "Policies", href: "/policies" },
     { id: 4, label: "Cart", href: "/cart" },
-    // { id: 5, label: "Home", href: "/" },
+    { id: 5, label: "Contact us", href: "/contact-us" },
     // { id: 6, label: "Home", href: "/" },
   ]
   return (

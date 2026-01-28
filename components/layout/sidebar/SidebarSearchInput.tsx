@@ -7,13 +7,9 @@ import { CiSearch } from "react-icons/ci"
 
 export function SidebarSearchInput() {
   return (
-    <Field className="text-black outline-none ">
+    <Field className="text-black outline-none">
       <ButtonGroup>
-        <Input
-          id="input-button-group"
-          placeholder="Type to search..."
-          className=""
-        />
+        <Input id="input-button-group" placeholder="Type to search..." />
         <Button variant="outline">
           <CiSearch />
         </Button>
