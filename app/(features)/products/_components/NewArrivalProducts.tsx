@@ -3,7 +3,7 @@ import { Product } from "@prisma/client"
 export default function NewArrivalProduct({ product }: { product: Product }) {
   console.log(product)
   return (
-    <div className="group relative flex flex-col">
+    <div className="group relative flex flex-col hover:cursor-pointer">
       <div className="relative w-full aspect-3/4 bg-gray-100 overflow-hidden rounded-sm">
         <img
           src={product.image || ""}
