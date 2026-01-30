@@ -1,35 +1,39 @@
+// _components/Pagination.tsx
 "use client"
-import Link from "next/link"
+import { useQueryState, parseAsInteger } from "nuqs"
 
 export default function Pagination({
-  page,
   totalPages,
 }: {
   page: number
   totalPages: number
 }) {
-  const prev = page > 1 ? page - 1 : 1
-  const next = page < totalPages ? page + 1 : totalPages
+  const [page, setPage] = useQueryState(
+    "page",
+    parseAsInteger.withDefault(1).withOptions({ shallow: false }),
+  )
 
   return (
-    <div className="flex items-center justify-center gap-3 mt-6">
-      <Link
-        href={`?page=${prev}`}
-        className="inline-flex items-center px-3 py-1.5 border border-[#EDEEF5] bg-white text-sm font-medium text-gray-800  shadow-sm hover:bg-gray-50 transition"
+    <div className="flex justify-center gap-4 mt-8">
+      <button
+        disabled={page <= 1}
+        onClick={() => setPage(page - 1)}
+        className="px-4 py-2 bg-gray-200 disabled:opacity-50 rounded"
       >
-        Prev
-      </Link>
+        Previous
+      </button>
 
-      <span className="inline-flex items-center px-3 py-1.5 border border-[#EDEEF5] bg-white text-sm font-medium text-gray-700  shadow-sm">
-        {page} / {totalPages}
+      <span className="py-2">
+        Page {page} of {totalPages}
       </span>
 
-      <Link
-        href={`?page=${next}`}
-        className="inline-flex items-center px-3 py-1.5 border border-[#EDEEF5] bg-white text-sm font-medium text-gray-800  shadow-sm hover:bg-gray-50 transition"
+      <button
+        disabled={page >= totalPages}
+        onClick={() => setPage(page + 1)}
+        className="px-4 py-2 bg-gray-200 disabled:opacity-50 rounded"
       >
         Next
-      </Link>
+      </button>
     </div>
   )
 }
