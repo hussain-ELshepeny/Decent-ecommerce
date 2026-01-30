@@ -9,7 +9,6 @@ export default async function Home({ searchParams }: any) {
       <NewArrivals />
       <BestSellers />
       <Categories />
-      {/* <Products searchParams={searchParams} /> */}
     </div>
   )
 }
