@@ -55,7 +55,7 @@ export default async function Page({ searchParams }: PageProps) {
 
           <ProductsList products={products} />
 
-          <Pagination page={page} totalPages={totalPages} />
+          <Pagination totalPages={totalPages} />
         </div>
       </div>
     </section>

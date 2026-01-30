@@ -1,13 +1,7 @@
-// _components/Pagination.tsx
 "use client"
 import { useQueryState, parseAsInteger } from "nuqs"
 
-export default function Pagination({
-  totalPages,
-}: {
-  page: number
-  totalPages: number
-}) {
+export default function Pagination({ totalPages }: { totalPages: number }) {
   const [page, setPage] = useQueryState(
     "page",
     parseAsInteger.withDefault(1).withOptions({ shallow: false }),
