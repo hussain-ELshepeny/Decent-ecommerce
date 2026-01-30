@@ -23,7 +23,7 @@ export default function ProductsSlider({ products }: { products: Product[] }) {
         }}
         breakpoints={{
           0: {
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           480: {
             slidesPerView: 2,
