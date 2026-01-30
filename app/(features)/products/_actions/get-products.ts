@@ -1,4 +1,3 @@
-// _actions/get-products.ts
 "use server"
 import prisma from "@/lib/prisma"
 
@@ -63,6 +62,7 @@ export async function getBestSellers() {
   try {
     const products = await prisma.product.findMany({
       take: 8,
+      skip: 2,
       orderBy: { price: "desc" },
     })
     return products
