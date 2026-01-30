@@ -41,3 +41,33 @@ export async function getProducts(filters: {
     totalPages: Math.ceil(total / limit),
   }
 }
+// just for now
+export async function getNewArrivals() {
+  try {
+    const products = await prisma.product.findMany({
+      take: 3,
+      skip: 5,
+      orderBy: {
+        createdAt: "asc",
+      },
+    })
+    return products
+  } catch (error) {
+    console.error("Error fetching latest products:", error)
+    return []
+  }
+}
+
+// just for now
+export async function getBestSellers() {
+  try {
+    const products = await prisma.product.findMany({
+      take: 8,
+      orderBy: { price: "desc" },
+    })
+    return products
+  } catch (error) {
+    console.error("Error fetching featured products:", error)
+    return []
+  }
+}

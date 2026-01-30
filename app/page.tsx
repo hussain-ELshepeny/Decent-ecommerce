@@ -7,7 +7,7 @@ export default async function Home({ searchParams }: any) {
     <div>
       <Landing />
       <NewArrivals />
-      <BestSellers />
+      {/* <BestSellers /> */}
       <Categories />
       {/* <Products searchParams={searchParams} /> */}
     </div>

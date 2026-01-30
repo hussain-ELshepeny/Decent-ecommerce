@@ -1,8 +1,8 @@
 import SectionHeader from "@/components/SectionHeading"
-import { getProducts } from "../_actions/get-products"
+import { getNewArrivals } from "../_actions/get-products"
 import NewArrivalProduct from "./NewArrivalProducts"
 export default async function NewArrivals() {
-  const { products: newArrivalProducts } = await getProducts(3, 3)
+  const newArrivalProducts = await getNewArrivals()
   console.log(newArrivalProducts)
   return (
     <section className="section-container my-20">
