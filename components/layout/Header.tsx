@@ -7,7 +7,7 @@ import HeaderLogo from "./HeaderLogo"
 export default function Header() {
   return (
     <header className="bg-brandDark text-white sticky top-0 z-50 border-brand-gold">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between items-center h-22">
           <div className={`nav-icon block md:hidden`}>
             <SearchButton />

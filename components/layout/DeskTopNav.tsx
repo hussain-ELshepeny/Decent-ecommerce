@@ -24,6 +24,10 @@ export default function DeskTopNav() {
       href: "/products",
     },
     {
+      label: "Contact",
+      href: "/contact",
+    },
+    {
       label: "Policies",
       href: "/policies",
     },

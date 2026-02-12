@@ -5,7 +5,7 @@ export async function getProducts(filters: {
   page: number
   limit: number
   q?: string
-  category?: string
+  category?: string[]
   sort?: string
 }) {
   const { page, limit, q, category, sort } = filters
@@ -17,8 +17,8 @@ export async function getProducts(filters: {
     where.OR = [{ name: { contains: q, mode: "insensitive" } }]
   }
 
-  if (category) {
-    where.category = { name: category }
+  if (category && category.length > 0) {
+    where.category = { name: { in: category } }
   }
 
   let orderBy: any = { createdAt: "desc" }
