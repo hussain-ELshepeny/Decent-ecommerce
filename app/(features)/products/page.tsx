@@ -3,6 +3,7 @@ import Filters from "./_components/Filters"
 import Pagination from "./_components/Pagination"
 import ProductsList from "./_components/ProductsList"
 import { searchParamsCache } from "@/lib/searchParams"
+import { SortDropDown } from "./_components/SortDropDown"
 
 type PageProps = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
@@ -26,15 +27,21 @@ export default async function Page({ searchParams }: PageProps) {
   })
 
   return (
-    <section className="section-container">
+    <section className="section-container mt-20">
       <div className="container mx-auto py-10">
+        {/* Sort */}
+        <div className="text-end px-6 mb-3">
+          <span className="font-body font-semibold flex items-center justify-end gap-2">
+            Sort by: <span className="font-normal">Date, old to new</span>
+            <SortDropDown />
+          </span>
+        </div>
         <div className="flex gap-6">
           <Filters />
 
           <ProductsList products={products} />
-
         </div>
-          <Pagination totalPages={totalPages} />
+        <Pagination totalPages={totalPages} />
       </div>
     </section>
   )
