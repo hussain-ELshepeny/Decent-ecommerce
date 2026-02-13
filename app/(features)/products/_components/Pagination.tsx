@@ -1,6 +1,5 @@
 "use client"
 import { useQueryState, parseAsInteger } from "nuqs"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import { MdKeyboardArrowRight } from "react-icons/md"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 
@@ -12,7 +11,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
   console.log(page)
   const NAVBUTTONS =
-    "px-2 py-2 disabled:opacity-50 rounded-full bg-white hover:cursor-pointer"
+    "px-2 py-2 disabled:opacity-50 rounded-full  hover:cursor-pointer"
 
   return (
     <div className="flex justify-center gap-4 mt-8">
