@@ -4,6 +4,9 @@ import Pagination from "./_components/Pagination"
 import ProductsList from "./_components/ProductsList"
 import { searchParamsCache } from "@/lib/searchParams"
 import { SortDropDown } from "./_components/SortDropDown"
+import { CiFilter } from "react-icons/ci"
+import Sort from "./_components/Sort"
+import FilterSideBar from "./_components/FilterSideBar"
 
 type PageProps = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
@@ -29,15 +32,14 @@ export default async function Page({ searchParams }: PageProps) {
   return (
     <section className="section-container mt-20">
       <div className="container mx-auto py-10">
-        {/* Sort */}
-        <div className="text-end px-6 mb-3">
-          <span className="font-body font-semibold flex items-center justify-end gap-2">
-            Sort by: <span className="font-normal">Date, old to new</span>
-            <SortDropDown />
-          </span>
+        {/* Sort & filter side bar */}
+        <div className="flex justify-between items-center md:justify-end md:px-6 mb-3">
+          {/* ss */}
+          <FilterSideBar />
+          <Sort />
         </div>
         <div className="flex gap-6">
-          <Filters />
+          <Filters variant="desktop" />
 
           <ProductsList products={products} />
         </div>

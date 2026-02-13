@@ -8,7 +8,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #35afa0;
+  --color-primary: #1a1a1a;
   --color-secondary: #3e445a;
   --color-buttonBackground: #233a95;
   --color-red: #d51243;

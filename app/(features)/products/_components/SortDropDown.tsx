@@ -19,14 +19,14 @@ export function SortDropDown() {
     <DropdownMenu>
       <DropdownMenuTrigger
         asChild
-        className=" group border-none shadow-none outline-none hover:cursor-pointer hover:outline-none hover:border-none"
+        className="group border-none shadow-none outline-none hover:cursor-pointer hover:outline-none hover:border-none"
       >
         <Button
           variant="outline"
           className="shadow-none border-none outline-none !p-0 hover:outline-none hover:border-none bg-[#1a1a1a1a] rounded-full w-5 h-5"
         >
           {" "}
-          {/* that was cool (talking to my self) */}
+          {/* that was cool (talking to my self if some body else is reading) */}
           <MdKeyboardArrowDown className="transition-transform duration-300 group-data-[state=open]:rotate-180" />{" "} 
         </Button>
       </DropdownMenuTrigger>
