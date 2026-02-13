@@ -113,7 +113,7 @@ export default function Filters({
           </div>
         </div>
         {/* Apply Filters Button  */}
-        <div style={{ justifySelf: "end" }}>
+        <div>
           <Button className="hover:cursor-pointer hover:text-brandGold text-white w-full">
             Apply Filters
           </Button>
