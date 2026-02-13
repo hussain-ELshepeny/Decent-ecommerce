@@ -1,7 +1,7 @@
 export default function Filters() {
   return (
-    <aside className="h-full bg-white shadow-sm">
-      <div className="bg-white dark:bg-charcoal/50 p-6 rounded-lg shadow-sm">
+    <aside className="h-full bg-[#f8f8f8] -mt-9">
+      <div className="bg-[#f8f8f8] dark:bg-charcoal/50 p-6 rounded-lg ">
         <h3 className="text-lg font-bold text-charcoal dark:text-white pb-3 border-b border-gray-200 dark:border-gray-700">
           Filters
         </h3>

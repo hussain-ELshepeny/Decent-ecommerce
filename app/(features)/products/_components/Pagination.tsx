@@ -1,6 +1,8 @@
 "use client"
 import { useQueryState, parseAsInteger } from "nuqs"
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import { MdKeyboardArrowRight } from "react-icons/md"
+import { MdKeyboardArrowLeft } from "react-icons/md"
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
   const [page, setPage] = useQueryState(
@@ -10,7 +12,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
   console.log(page)
   const NAVBUTTONS =
-    "px-4 py-2  disabled:opacity-50 rounded-full bg-white hover:cursor-pointer"
+    "px-2 py-2 disabled:opacity-50 rounded-full bg-white hover:cursor-pointer"
 
   return (
     <div className="flex justify-center gap-4 mt-8">
@@ -19,7 +21,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
         onClick={() => setPage(page - 1)}
         className={`${NAVBUTTONS} ${page === 1 ? `invisible` : `visible`}`}
       >
-        <FaArrowLeft />
+        <MdKeyboardArrowLeft size={27} />
       </button>
 
       <span className="py-2">
@@ -31,7 +33,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
         onClick={() => setPage(page + 1)}
         className={`${NAVBUTTONS}`}
       >
-        <FaArrowRight />
+        <MdKeyboardArrowRight size={27} />
       </button>
     </div>
   )
