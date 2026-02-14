@@ -6,7 +6,6 @@ import Filters from "./Filters"
 export default function FilterSideBar() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggleMenu = () => setIsOpen(!isOpen)
   return (
     <>
       <button

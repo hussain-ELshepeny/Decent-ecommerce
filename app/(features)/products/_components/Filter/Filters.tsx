@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import FilterHeading from "./FilterHeading"
+import { PriceRange } from "./PriceRange"
 
 export default function Filters({
   variant,
@@ -100,7 +101,8 @@ export default function Filters({
           {/* Price Range Slider  */}
           <div className="py-6">
             <FilterHeading>Price Range</FilterHeading>
-            <div className="relative pt-1">
+            <PriceRange />
+            {/* <div className="relative pt-1">
               <input
                 className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer [&amp;::-webkit-slider-thumb]:h-4 [&amp;::-webkit-slider-thumb]:w-4 [&amp;::-webkit-slider-thumb]:rounded-full [&amp;::-webkit-slider-thumb]:bg-gold [&amp;::-moz-range-thumb]:h-4 [&amp;::-moz-range-thumb]:w-4 [&amp;::-moz-range-thumb]:rounded-full [&amp;::-moz-range-thumb]:bg-gold"
                 type="range"
@@ -109,7 +111,7 @@ export default function Filters({
                 <span>$50</span>
                 <span>$500</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Apply Filters Button  */}
